@@ -104,6 +104,17 @@ const fingerprint = client.getCustomFingerprint(
 
 
 
+// Get the target element
+let h1 = document.querySelector('h1');
+
+// Create a new element
+let p = document.createElement('p');
+p.textContent = fingerprint;
+
+// Replace the target with the new element
+// <p>Good morning</p>
+h1.replaceWith("Hello,",p);
+
 
 
 
