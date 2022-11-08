@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello, world!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+</head>
+<body>
+  <h1>Hello, world!</h1>
+  <script>
+    // Create a new ClientJS object
+const client = new ClientJS();
+
+// client.getBrowserData();
+// client.getUserAgent();
+// client.getUserAgentLowerCase();
+// client.getBrowser();
+// client.getBrowserVersion();
+// client.getBrowserMajorVersion();
+// client.isIE();
+// client.isChrome();
+// client.isFirefox();
+// client.isSafari();
+// client.isOpera();
+// var engine = client.getEngine();
+// client.getEngineVersion();
+var os = client.getOS();
+// client.getOSVersion();
+// client.isWindows();
+// client.isMac();
+// client.isLinux();
+// client.isUbuntu();
+// client.isSolaris();
+var device = client.getDevice();
+// client.getDeviceType();
+// client.getDeviceVendor();
+var CPU = client.getCPU();
+var isMobile = client.isMobile();
+// client.isMobileMajor();
+// client.isMobileAndroid();
+// client.isMobileOpera();
+// client.isMobileWindows();
+// client.isMobileBlackBerry();
+// client.isMobileIOS();
+// client.isIphone();
+// client.isIpad();
+// client.isIpod();
+// var screenprint = client.getScreenPrint();
+// var colorDepth = client.getColorDepth();
+var currentResolution = client.getCurrentResolution();
+// var availresolution = client.getAvailableResolution();
+var deviceXDPI = client.getDeviceXDPI();
+var deviceYDPI = client.getDeviceYDPI();
+// var plugins = client.getPlugins();
+var isJava = client.isJava();
+// client.getJavaVersion(); // functional only in java and full builds, throws an error otherwise
+var isFlash = client.isFlash();
+// client.getFlashVersion(); // functional only in flash and full builds, throws an error otherwise
+var isSilverlight = client.isSilverlight();
+// client.getSilverlightVersion();
+// var mimeTypes = client.getMimeTypes();
+var isMimeTypes = client.isMimeTypes();
+var isFont = client.isFont();
+// var fonts = client.getFonts();
+var isLocalStorage = client.isLocalStorage();
+var isSessionStorage = client.isSessionStorage();
+var isCookie = client.isCookie();
+var timezone = client.getTimeZone();
+var language = client.getLanguage();
+var sysLanguage = client.getSystemLanguage();
+// var canvas = client.isCanvas();
+// var canvasPrint = client.getCanvasPrint();
+
+
+// Get the client's fingerprint id
+
+//  const fingerprint = client.getCustomFingerprint(os,language,timezone,device,CPU,isLocalStorage,isSessionStorage,isCookie,isJava,isFlash,isMobile); 5/5
+// const fingerprint = client.getCustomFingerprint(os,language,timezone,device,CPU,isLocalStorage,isSessionStorage,isCookie,isJava,isFlash,isMobile, fonts); //B,C,F same print & D,S same print
+// const fingerprint = client.getCustomFingerprint(os,language,timezone,device,CPU,isLocalStorage,isSessionStorage,isCookie,isJava,isFlash,isMobile,isFont,isMimeTypes,isSilverlight); 6/6
+
+const fingerprint = client.getCustomFingerprint(
+    os,
+    language,
+    sysLanguage,
+    timezone,
+    device,
+    deviceXDPI,
+    deviceYDPI,
+    currentResolution,
+    isMobile,
+    CPU,
+    isLocalStorage,
+    isSessionStorage,
+    isCookie,
+    isJava,
+    isFlash,
+    isSilverlight,
+    isFont,
+    isMimeTypes
+); 
+
+
+
+
+
+
+
+// Print the 32bit hash id to the console
+console.log(fingerprint);
+ </script> 
+</body>
+</html>
