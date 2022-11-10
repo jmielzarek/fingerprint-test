@@ -96,7 +96,25 @@ const fingerprint = client.getCustomFingerprint(
     // isMimeTypes
 ); 
 
-
+console.log(
+    os,                     // Get OS Version
+    language,               // lowercase string containing the user language
+    sysLanguage,            // lowercase string containing the system language.
+    timezone,
+    device,                 // string containing the device
+    deviceXDPI,             // string containing the device XPDI
+    deviceYDPI,             // string containing the device YPDI
+    currentResolution,
+    isMobile,               // Check if the browser is on a mobile device
+    CPU,                    // String containing the CPU architecture
+    isLocalStorage,         // Check if local storage is avaliable
+    isSessionStorage,       // Check if session storage is avaliable
+    isCookie,               // Check if cookies are avaliable
+    isJava,                 // Check if Java is installed
+    isFlash,                // Check if Flash is installed
+    isSilverlight,          // Check if Silverlight is installed
+    isFont, 
+);
 
 
 // Get the target element
@@ -118,85 +136,8 @@ console.log(client);
 
 
 
-console.log(
-    client.getBrowserData,
-client.getFingerprint,
-client.getCustomFingerprint,
 
-client.getUserAgent,
-client.getUserAgentLowerCase,
 
-client.getBrowser,
-client.getBrowserVersion,
-client.getBrowserMajorVersion,
-client.isIE,
-client.isChrome,
-client.isFirefox,
-client.isSafari,
-client.isOpera,
-
-client.getEngine,
-client.getEngineVersion,
-
-client.getOS,
-client.getOSVersion,
-client.isWindows,
-client.isMac,
-client.isLinux,
-client.isUbuntu,
-client.isSolaris,
-
-client.getDevice,
-client.getDeviceType,
-client.getDeviceVendor,
-
-client.getCPU,
-
-client.isMobile,
-client.isMobileMajor,
-client.isMobileAndroid,
-client.isMobileOpera,
-client.isMobileWindows,
-client.isMobileBlackBerry,
-
-client.isMobileIOS,
-client.isIphone,
-client.isIpad,
-client.isIpod,
-
-client.getScreenPrint,
-client.getColorDepth,
-client.getCurrentResolution,
-client.getAvailableResolution,
-client.getDeviceXDPI,
-client.getDeviceYDPI,
-
-client.getPlugins,
-client.isJava,
-client.getJavaVersion, // functional only in java and full builds, throws an error otherwise
-client.isFlash,
-client.getFlashVersion, // functional only in flash and full builds, throws an error otherwise
-client.isSilverlight,
-client.getSilverlightVersion,
-
-client.getMimeTypes,
-client.isMimeTypes,
-
-client.isFont,
-client.getFonts,
-
-client.isLocalStorage,
-client.isSessionStorage,
-client.isCookie,
-
-client.getTimeZone,
-
-client.getLanguage,
-client.getSystemLanguage,
-
-client.isCanvas,
-client.getCanvasPrint,
-)
 
 </script> 
 </body>
