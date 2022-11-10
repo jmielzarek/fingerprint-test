@@ -13,65 +13,65 @@
     // Create a new ClientJS object
 const client = new ClientJS();
 
-// client.getBrowserData();
-// client.getUserAgent();
-// client.getUserAgentLowerCase();
-// client.getBrowser();
-// client.getBrowserVersion();
-// client.getBrowserMajorVersion();
-// client.isIE();
-// client.isChrome();
-// client.isFirefox();
-// client.isSafari();
-// client.isOpera();
-// var engine = client.getEngine();
-// client.getEngineVersion();
+var getBrowserData =  client.getBrowserData();
+var getUserAgent = client.getUserAgent();
+var getUserAgentLowerCase = client.getUserAgentLowerCase();
+var getBrowser = client.getBrowser();
+var getBrowserVersion = client.getBrowserVersion();
+var getBrowserMajorVersion = client.getBrowserMajorVersion();
+var isIE = client.isIE();
+var isChrome = client.isChrome();
+var isFirefox = client.isFirefox();
+var isSafari = client.isSafari();
+var isOpera = client.isOpera();
+var getEngine = client.getEngine();
+var getEngineVersion = client.getEngineVersion();
 var os = client.getOS();
-// client.getOSVersion();
-// client.isWindows();
-// client.isMac();
-// client.isLinux();
-// client.isUbuntu();
-// client.isSolaris();
+var getOSVerison = client.getOSVersion();
+var isWindows =  client.isWindows();
+var isMac = client.isMac();
+var isLinux = client.isLinux();
+var isUbuntu = client.isUbuntu();
+var isSolaris = client.isSolaris();
 var device = client.getDevice();
-// client.getDeviceType();
-// client.getDeviceVendor();
+var getDeviceType = client.getDeviceType();
+var getDeviceVendor = client.getDeviceVendor();
 var CPU = client.getCPU();
 var isMobile = client.isMobile();
-// client.isMobileMajor();
-// client.isMobileAndroid();
-// client.isMobileOpera();
-// client.isMobileWindows();
-// client.isMobileBlackBerry();
-// client.isMobileIOS();
-// client.isIphone();
-// client.isIpad();
-// client.isIpod();
-// var screenprint = client.getScreenPrint();
-// var colorDepth = client.getColorDepth();
+var isMobileMajor = client.isMobileMajor();
+var isMobileAndroid = client.isMobileAndroid();
+var isMobileOpera = client.isMobileOpera();
+var isMobileWindows = client.isMobileWindows();
+var isMobileBlackBerry = client.isMobileBlackBerry();
+var isMobileIOS = client.isMobileIOS();
+var isIphone = client.isIphone();
+var isIpad = client.isIpad();
+var isIpod = client.isIpod();
+var screenprint = client.getScreenPrint();
+var colorDepth = client.getColorDepth();
 var currentResolution = client.getCurrentResolution();
-// var availresolution = client.getAvailableResolution();
+var availresolution = client.getAvailableResolution();
 var deviceXDPI = client.getDeviceXDPI();
 var deviceYDPI = client.getDeviceYDPI();
-// var plugins = client.getPlugins();
+var plugins = client.getPlugins();
 var isJava = client.isJava();
-// client.getJavaVersion(); // functional only in java and full builds, throws an error otherwise
+var getJavaVersion = client.getJavaVersion(); // functional only in java and full builds, throws an error otherwise
 var isFlash = client.isFlash();
-// client.getFlashVersion(); // functional only in flash and full builds, throws an error otherwise
+var getFlashVersion = client.getFlashVersion(); // functional only in flash and full builds, throws an error otherwise
 var isSilverlight = client.isSilverlight();
-// client.getSilverlightVersion();
-// var mimeTypes = client.getMimeTypes();
+var getSilverlightVersion = client.getSilverlightVersion();
+var mimeTypes = client.getMimeTypes();
 var isMimeTypes = client.isMimeTypes();
 var isFont = client.isFont();
-// var fonts = client.getFonts();
+var fonts = client.getFonts();
 var isLocalStorage = client.isLocalStorage();
 var isSessionStorage = client.isSessionStorage();
 var isCookie = client.isCookie();
 var timezone = client.getTimeZone();
 var language = client.getLanguage();
 var sysLanguage = client.getSystemLanguage();
-// var canvas = client.isCanvas();
-// var canvasPrint = client.getCanvasPrint();
+var canvas = client.isCanvas();
+var canvasPrint = client.getCanvasPrint();
 
 
 
@@ -96,25 +96,7 @@ const fingerprint = client.getCustomFingerprint(
     // isMimeTypes
 ); 
 
-console.log(
-    os,                     // Get OS Version
-    language,               // lowercase string containing the user language
-    sysLanguage,            // lowercase string containing the system language.
-    timezone,
-    device,                 // string containing the device
-    deviceXDPI,             // string containing the device XPDI
-    deviceYDPI,             // string containing the device YPDI
-    currentResolution,
-    isMobile,               // Check if the browser is on a mobile device
-    CPU,                    // String containing the CPU architecture
-    isLocalStorage,         // Check if local storage is avaliable
-    isSessionStorage,       // Check if session storage is avaliable
-    isCookie,               // Check if cookies are avaliable
-    isJava,                 // Check if Java is installed
-    isFlash,                // Check if Flash is installed
-    isSilverlight,          // Check if Silverlight is installed
-    isFont, 
-);
+
 
 
 // Get the target element
@@ -129,10 +111,65 @@ p.textContent = fingerprint;
 h1.replaceWith("Hello,",client);
 
 
-console.log()
-
-// Print the 32bit hash id to the console
-console.log(client);
+console.log(getBrowserData,"client.getBrowserData");
+console.log(getUserAgent,"client.getUserAgent");
+console.log(getUserAgentLowerCase,"client.getUserAgentLowerCase");
+console.log(getBrowser,"client.getBrowser");
+console.log(getBrowserVersion,"client.getBrowserVersion");
+console.log(getBrowserMajorVersion,"client.getBrowserMajorVersion");
+console.log(isIE,"client.isIE");
+console.log(isChrome,"client.isChrome");
+console.log(isFirefox,"client.isFirefox");
+console.log(isSafari,"client.isSafari");
+console.log(isOpera,"client.isOpera");
+console.log(getEngine,"client.getEngine");
+console.log(getEngineVersion,"client.getEngineVersion");
+console.log(os,"client.getOS");
+console.log(getOSVerison,"client.getOSVersion");
+console.log(isWindows,"client.isWindows");
+console.log(isMac,"client.isMac");
+console.log(isLinux,"client.isLinux");
+console.log(isUbuntu,"client.isUbuntu");
+console.log(isSolaris,"client.isSolaris");
+console.log(device,"client.getDevice");
+console.log(getDeviceType,"client.getDeviceType");
+console.log(getDeviceVendor,"client.getDeviceVendor");
+console.log(CPU,"client.getCPU");
+console.log(isMobile,"client.isMobile");
+console.log(isMobileMajor,"client.isMobileMajor");
+console.log(isMobileAndroid,"client.isMobileAndroid");
+console.log(isMobileOpera,"client.isMobileOpera");
+console.log(isMobileWindows,"client.isMobileWindows");
+console.log(isMobileBlackBerry,"client.isMobileBlackBerry");
+console.log(isMobileIOS,"client.isMobileIOS");
+console.log(isIphone,"client.isIphone");
+console.log(isIpad,"client.isIpad");
+console.log(isIpod,"client.isIpod");
+console.log(screenprint,"client.getScreenPrint");
+console.log(colorDepth,"client.getColorDepth");
+console.log(currentResolution,"client.getCurrentResolution");
+console.log(availresolution,"client.getAvailableResolution");
+console.log(deviceXDPI,"client.getDeviceXDPI");
+console.log(deviceYDPI,"client.getDeviceYDPI");
+console.log(plugins,"client.getPlugins");
+console.log(isJava,"client.isJava");
+console.log(getJavaVersion,"client.getJavaVersion"); // functional only in java and full builds, throws an error otherwise
+console.log(isFlash,"client.isFlash");
+console.log(getFlashVersion,"client.getFlashVersion"); // functional only in flash and full builds, throws an error otherwise
+console.log(isSilverlight,"client.isSilverlight");
+console.log(getSilverlightVersion,"client.getSilverlightVersion");
+console.log(mimeTypes,"client.getMimeTypes");
+console.log(isMimeTypes,"client.isMimeTypes");
+console.log(isFont,"client.isFont");
+console.log(fonts,"client.getFonts");
+console.log(isLocalStorage,"client.isLocalStorage");
+console.log(isSessionStorage,"client.isSessionStorage");
+console.log(isCookie,"client.isCookie");
+console.log(timezone,"client.getTimeZone");
+console.log(language,"client.getLanguage");
+console.log(sysLanguage,"client.getSystemLanguage");
+console.log(canvas,"client.isCanvas");
+console.log(canvasPrint,"client.getCanvasPrint");
 
 
 
