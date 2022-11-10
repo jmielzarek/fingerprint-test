@@ -74,30 +74,25 @@ var sysLanguage = client.getSystemLanguage();
 // var canvasPrint = client.getCanvasPrint();
 
 
-// Get the client's fingerprint id
-
-//  const fingerprint = client.getCustomFingerprint(os,language,timezone,device,CPU,isLocalStorage,isSessionStorage,isCookie,isJava,isFlash,isMobile); 5/5
-// const fingerprint = client.getCustomFingerprint(os,language,timezone,device,CPU,isLocalStorage,isSessionStorage,isCookie,isJava,isFlash,isMobile, fonts); //B,C,F same print & D,S same print
-// const fingerprint = client.getCustomFingerprint(os,language,timezone,device,CPU,isLocalStorage,isSessionStorage,isCookie,isJava,isFlash,isMobile,isFont,isMimeTypes,isSilverlight); 6/6
 
 const fingerprint = client.getCustomFingerprint(
-    os,
-    language,
-    sysLanguage,
+    os,                     // Get OS Version
+    language,               // lowercase string containing the user language
+    sysLanguage,            // lowercase string containing the system language.
     // timezone,
-    device,
-    deviceXDPI,
-    deviceYDPI,
+    device,                 // string containing the device
+    deviceXDPI,             // string containing the device XPDI
+    deviceYDPI,             // string containing the device YPDI
     // currentResolution,
-    isMobile,
-    CPU,
-    isLocalStorage,
-    isSessionStorage,
-    isCookie,
-    isJava,
-    isFlash,
-    isSilverlight,
-    isFont,
+    isMobile,               // Check if the browser is on a mobile device
+    CPU,                    // String containing the CPU architecture
+    isLocalStorage,         // Check if local storage is avaliable
+    isSessionStorage,       // Check if session storage is avaliable
+    isCookie,               // Check if cookies are avaliable
+    isJava,                 // Check if Java is installed
+    isFlash,                // Check if Flash is installed
+    isSilverlight,          // Check if Silverlight is installed
+    isFont,                 // Check if a font is installed
     // isMimeTypes
 ); 
 
@@ -113,13 +108,42 @@ p.textContent = fingerprint;
 
 // Replace the target with the new element
 // <p>Good morning</p>
-h1.replaceWith("Hello,",p);
+h1.replaceWith("Hello,",client);
 
 
-
+console.log()
 
 // Print the 32bit hash id to the console
 console.log(fingerprint);
  </script> 
 </body>
 </html>
+
+<!-- 
+    1085907518
+Brave
+Brave Incognito
+Chrome
+Chrome Incognito
+Firefox 
+Firefox Incognito
+DuckDuckGo
+Microsoft Edge
+Microsoft Edge Incognito
+Safari 
+Safari Incognito
+Tor  
+-->
+
+<!--
+    2460916112
+Aloha Mobile
+Aloha Mobile Incognito
+Safari Mobile
+Safari Mobile Incognito
+Chrome Mobile
+Chrome Mobile Incognito
+Firefox Mobile
+Firefox Mobile Incognito
+-->
+
